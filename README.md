@@ -1,3 +1,5 @@
+Need to add hex and asci table for refference
+
 # badchars
 ```
 badchars = (
