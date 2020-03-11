@@ -37,8 +37,6 @@ we discover a application is vulnerable to buffer overflow  by fuzzing the appli
 
 ### introduction to immunity debuuger
 
-
-
 #### adding the application to  imunnity debugger
 
 ####  
@@ -49,7 +47,7 @@ a fuzzer  fuzzes the application with in an random incremental order such that t
 
 #### replicating the crash 
 
-we replicate crash by sending the appliation with value at which it crashed on the fuzzer
+we replicate crash by sending the appliation with value at which it crashed 
 
 #### controlling the EIP
 
@@ -87,7 +85,7 @@ msf-pattern_offset -l lengthofbuffer -q stringfromeip
 "\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff"
 ```
 
-
+![](C:\Users\bhuva\Downloads\download.png)
 
 ##### redirecting the execution flow
 
@@ -213,7 +211,7 @@ nasmm>
 "\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff"
 ```
 
-
+![](C:\Users\bhuva\Downloads\download.png)
 
 ### finding a return address
 
