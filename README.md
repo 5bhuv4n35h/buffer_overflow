@@ -6,9 +6,12 @@
 
 
 
+
 ## types
 
+
 ### stack based
+
 
 A technically inclined user may exploit stack-based buffer overflows to manipulate the program to their advantage in one of several ways:
 
@@ -17,11 +20,13 @@ A technically inclined user may exploit stack-based buffer overflows to manipula
 - By overwriting a function pointer[[1\]](https://en.wikipedia.org/wiki/Buffer_overflow#cite_note-1) or [exception handler](https://en.wikipedia.org/wiki/Exception_handler), which is subsequently executed
 - By overwriting a local variable (or pointer) of a different stack frame, which will be used by the function which owns that frame later  
 
+
 ![Image result for stack based  buffer overflow](https://payatu.com/wp-content/uploads/2018/01/c_prog_mem_layout.jpg)
 
 ### heap based
 
 A buffer overflow occurring in the heap data area is referred to as a heap overflow and is exploitable in a manner different from that of stack-based overflows. Memory on the heap is dynamically allocated by the application at run-time and typically contains program data. Exploitation is performed by corrupting this data in specific ways to cause the application to overwrite internal structures such as linked list pointers. The canonical heap overflow technique overwrites dynamic memory allocation linkage (such as [malloc](https://en.wikipedia.org/wiki/Malloc) meta data) and uses the resulting pointer exchange to overwrite a program function pointer
+
 
 
 
@@ -32,6 +37,7 @@ A buffer overflow occurring in the heap data area is referred to as a heap overf
 ### windows buffer overflow
 
 #### discovering vulnerablity 
+
 
 we discover a application is vulnerable to buffer overflow  by fuzzing the application with a fuzzer
 
