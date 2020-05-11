@@ -8,7 +8,7 @@ BOLD="\033[01;01m"     # Highlight
 RESET="\033[00m"       # Normal
 echo -e "${GREEN}"
 ##################################installation starts ######################################
-options=("create unique pattern for buffer overflow " "locate patter offset for bufer overflow"   "Quit")
+options=("create unique pattern for buffer overflow " "locate patter offset for bufer overflow"  "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -26,12 +26,15 @@ do
            read -p "enter the length of buffer " lenb
            read -p "enter the eip string " eipb
            /usr/bin/msf-pattern_offset -l $lenb -q $eipb
-         ;;    
+         ;;  
+   
+    
     "Quit")
        break
        ;;
+    
     *) 
      echo invalid option
      ;;
-    esac
+  esac
 done
