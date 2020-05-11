@@ -12,7 +12,7 @@ options=("create unique pattern for buffer overflow " "locate patter offset for 
 select opt in "${options[@]}"
 do
     case $opt in
-    
+    ####options####
     "create unique pattern for buffer overflow ")              
         echo -e "${GREEN} "
                   /usr/bin/msf-pattern_create -h
