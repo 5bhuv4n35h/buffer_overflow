@@ -150,7 +150,7 @@ nc -nlvp port to connect
 
 
 
-### linux buffer overflow
+# linux buffer overflow
 
 #### discovering the vulnerablity
 
