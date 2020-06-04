@@ -125,11 +125,11 @@ load word or store word instruction uses only one memory address. The lowest add
 
 How is a 32-bit pattern held in the four bytes of memory? There are 32 bits in the four bytes and 32 bits in the pattern, but a choice has to be made about which byte of memory gets what part of the pattern. There are two ways that computers commonly do this:
 
-   ## Big Endian Byte Order: 
+### Big Endian Byte Order: 
    The most significant byte (the "big end") of the data is placed at the byte with the lowest address. The rest of the data is placed in order in the next three bytes in memory.
 
-
-   ## Little Endian Byte Order: The least significant byte (the "little end") of the data is placed at the byte with the lowest address. The rest of the data is placed in order in the next three bytes in memory.
+###  Little Endian Byte Order: 
+The least significant byte (the "little end") of the data is placed at the byte with the lowest address. The rest of the data is placed in order in the next three bytes in memory.
 
 In these definitions, the data, a 32-bit pattern, is regarded as a 32-bit unsigned integer. The "most significant" byte is the one for the largest powers of two: 231, ..., 224. The "least significant" byte is the one for the smallest powers of two: 27, ..., 20.
 
@@ -138,7 +138,7 @@ For example, say that the 32-bit pattern 0x12345678 is stored at address 0x00400
 
 Within a byte the order of the bits is the same for all computers (no matter how the bytes themselves are arranged).
 
-<img src="https://chortle.ccsu.edu/AssemblyTutorial/Chapter-15/bigLittleEndian.gif" style="zoom:50%;" />
+<img src="https://www.computerhope.com/jargon/e/endian.jpg" style="zoom:50%;" />
 
 #### genrating shellcode
 
@@ -214,6 +214,7 @@ msf-pattern_offset -q string
 
 #### geting opcodes
 <img src="https://i.stack.imgur.com/qLiB4.png">
+
 ```
 msf-nasm_shell
 nasm>
@@ -235,7 +236,7 @@ nasmm>
 "\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff"
 ```
 
-![](download.png)
+
 
 ### finding a return address
 
@@ -263,7 +264,7 @@ For example, say that the 32-bit pattern 0x12345678 is stored at address 0x00400
 
 Within a byte the order of the bits is the same for all computers (no matter how the bytes themselves are arranged).
 
-<img src="https://chortle.ccsu.edu/AssemblyTutorial/Chapter-15/bigLittleEndian.gif" style="zoom:50%;" />
+<img src="https://www.computerhope.com/jargon/e/endian.jpg" style="zoom:50%;" />
 
 ### genrating shellcode
 
