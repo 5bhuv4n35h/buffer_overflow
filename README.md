@@ -109,6 +109,7 @@ msf-pattern_offset -l lengthofbuffer -q stringfromeip
 
 ##### nasm shell
 
+<img src="https://i.stack.imgur.com/qLiB4.png">
 ```
 msf-nasm_shell
 
@@ -213,7 +214,7 @@ msf-pattern_offset -q string
 
 
 #### geting opcodes
-<img src="https://i.stack.imgur.com/qLiB4.png">
+
 
 ```
 msf-nasm_shell
