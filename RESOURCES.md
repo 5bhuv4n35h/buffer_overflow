@@ -1,4 +1,5 @@
 # RESOURCES
 
-[]: https://samsclass.info/127/proj/vuln-server.htm	"samclass bufferoverflow exploitations"
+## https://samsclass.info/127/proj/vuln-server.htm	
+## https://medium.com/@Z3R0th/a-simple-buffer-overflow-using-vulnserver-86b011eb673b
 
