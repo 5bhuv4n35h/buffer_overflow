@@ -51,6 +51,8 @@ we discover a application is vulnerable to buffer overflow  by fuzzing the appli
 
 a fuzzer  fuzzes the application with in an random incremental order such that the application stops when it detects a crash or timeout from the application we interact
 
+refer boofuzz
+
 #### replicating the crash 
 
 we replicate crash by sending the appliation with value at which it crashed 
