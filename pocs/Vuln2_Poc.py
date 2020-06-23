@@ -8,7 +8,7 @@ try:
 
   s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
   
-  s.connect(("192.168.176.227", 7002))
+  s.connect(("192.168.1.156", 7002))
   s.send(buffer)
   
   s.close()
