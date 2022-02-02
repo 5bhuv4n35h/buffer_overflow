@@ -1,8 +1,7 @@
-# buffer overflow
+# buffer overflow 
 
 ![Image result for buffer overflow](https://dpsvdv74uwwos.cloudfront.net/statics/img/ogimage/buffer-overflow-attacks.png)
 
-[TOC]
 
 
 
